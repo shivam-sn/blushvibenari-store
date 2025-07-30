@@ -1,0 +1,59 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.header__inline-menu ul li a span,.menu-drawer__navigation ul li a').each(function(){
+      var navItemGm = $(this).text().trim().toLowerCase(); // safer with lowercase
+
+      if (navItemGm === 'home') {
+        var icon = '<img src="https://cdn.shopify.com/s/files/1/0679/5722/7682/files/home-logo.png?v=1752732316" />';
+        $(this).prepend(icon);
+      }
+
+      if (navItemGm === 'shop all') {
+        var icon = '<img src="https://cdn.shopify.com/s/files/1/0679/5722/7682/files/shop-all.png?v=1752733898" />';
+        $(this).prepend(icon);
+      }
+
+      if (navItemGm === 'new arrivals') {
+        var icon = '<img src="https://cdn.shopify.com/s/files/1/0679/5722/7682/files/shop-all.png?v=1752733898" />';
+        $(this).prepend(icon);
+      }
+
+      if (navItemGm === 'bridals') {
+        var icon = '<img src="https://cdn.shopify.com/s/files/1/0679/5722/7682/files/bridal-logo.png?v=1752735149" />';
+        $(this).prepend(icon);
+      }
+
+      if (navItemGm === 'best sellers') {
+        var icon = '<img src="https://cdn.shopify.com/s/files/1/0679/5722/7682/files/party-logo.png?v=1752735120" />';
+        $(this).prepend(icon);
+      }
+
+      if (navItemGm === 'about us') {
+        var icon = '<img src="https://cdn.shopify.com/s/files/1/0679/5722/7682/files/contact-logo.png?v=1752735179" />';
+        $(this).prepend(icon);
+      }
+
+      if (navItemGm === 'contact us') {
+        var icon = '<img src="https://cdn.shopify.com/s/files/1/0679/5722/7682/files/contact-logo.png?v=1752735179" />';
+        $(this).prepend(icon);
+      }
+      
+    });
+  });
+</script>
+
+<style>
+  .header__inline-menu ul li a span,.menu-drawer__navigation ul li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .header__inline-menu ul li a span img,.menu-drawer__navigation ul li a img {
+    width: 20px;
+    height: auto;
+    object-fit: cover;
+  }
+</style>

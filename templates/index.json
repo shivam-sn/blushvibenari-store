@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_QWJGMK": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_YYyRfN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Elegance_in_Every_Stitch.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_APDXUE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "<em>Express Your Elegant  Fashion</em>",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": ""
+          }
+        },
+        "slide_qQbQge": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "<em>Express Your Elegant  Fashion</em>",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_YYyRfN",
+        "slide_APDXUE",
+        "slide_qQbQge"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_i7jR7g": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_MqkjKM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "new-arrival"
+          }
+        },
+        "featured_collection_EHJzfp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bridal-lehengas"
+          }
+        },
+        "featured_collection_GrfHit": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "suits-kurtis"
+          }
+        },
+        "featured_collection_PP9nVz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "saree"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_MqkjKM",
+        "featured_collection_EHJzfp",
+        "featured_collection_GrfHit",
+        "featured_collection_PP9nVz"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_QWJGMK",
+    "featured_collection",
+    "collection_list_i7jR7g"
+  ]
+}

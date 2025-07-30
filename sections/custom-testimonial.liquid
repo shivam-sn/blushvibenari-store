@@ -1,0 +1,43 @@
+{{ product.price | money }}  
+<div class="page-width">
+<div class="testimonial-section">
+  {% for block in section.blocks %}
+    <div class="testimonial">
+      <p class="quote"><h3>{{ block.settings.quote }}</h3></p>
+      <p class="author">— {{ block.settings.author }}</p>
+    </div>
+  {% endfor %}
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Testimonial",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "quote",
+          "label": "Testimonial Quote"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author Name"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [
+    {
+      "name": "Custom Testimonial",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,27 @@
+<div class="container mt-5">
+<h2>My Loop Items:</h2>
+
+<ul>
+  {% assign items = "Apple,Banana,Mango,Guava,Potato-King" | split: "," %}
+  {% for item in items %}
+    <li>{{ forloop.index }} - {{ item }}</li>
+  {% endfor %}
+</ul>
+</div>
+
+<div class="container mt-4">
+  {% assign badhsha = "king ki value hgai" %}
+  <strong>{{ badhsha }}</strong>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 bg-primary text-white p-3">Left</div>
+    <div class="col-md-6 bg-success text-white p-3">Right</div>
+  </div>
+</div>
+<style>
+  .p-3{
+  color:red;
+  }
+  </style>

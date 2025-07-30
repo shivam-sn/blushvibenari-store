@@ -1,0 +1,16 @@
+.header.header--middle-left.header--mobile-center.page-width.header--has-menu.header--has-account {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+@media (min-width: 991px) and (max-width: 1148px) {
+  .header__inline-menu .list-menu--inline {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .header__inline-menu .list-menu--inline li {
+    flex: 0 0 auto;
+  }
+}
