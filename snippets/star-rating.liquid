@@ -1,48 +1,46 @@
-{% assign rating = ratingValue | plus: 0 %}
-{% assign percentage = rating | times: 20 %}
+<!-- Font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<style>
-  .stars-outer {
-    position: relative;
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: 18px;
-    color: #ccc;
-  }
-
-  .stars-outer::before {
-    content: "\f006 \f006 \f006 \f006 \f006"; /* empty stars */
-  }
-
-  .stars-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #F8CE0B;
-    width: {{ percentage }}%;
-  }
-
-  .stars-inner::before {
-    content: "\f005 \f005 \f005 \f005 \f005"; /* filled stars */
-  }
-
-  .rating-text {
-    font-size: 14px;
-    margin-left: 6px;
-  }
-</style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-{% if ratingValue %}
-  <div class="star-rating-wrapper" style="display: flex; align-items: center;">
-    <div class="stars-outer">
-      <div class="stars-inner"></div>
-    </div>
-    <span class="rating-text">
-      {{ ratingValue }}/5{% if reviews %} Based on {{ reviews }} reviews{% endif %}
-    </span>
-  </div>
-{% endif %}
+ <style>
+ 
+   :root {
+   --star-empty-color: currentColor; /* This will inherit the body's text color */
+ }
+ 
+ .stars-outer {
+   display: inline-block;
+   position: relative;
+   font-family: FontAwesome;
+ }
+ 
+ .stars-outer::before {
+   content: "\f006 \f006 \f006 \f006 \f006";
+   color: #F8CE0B; /* Use the CSS variable for the empty star color */
+ }
+ 
+ .stars-inner {
+   position: absolute;
+   top: 0;
+   left: 0;
+   white-space: nowrap;
+   overflow: hidden;
+   width: 0; /* Width will be set dynamically via JavaScript */
+ }
+ 
+ .stars-inner::before {
+   content: "\f005 \f005 \f005 \f005 \f005";
+   color: #F8CE0B; /* Color for the filled stars */
+ }
+ </style>
+ 
+ 
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+   const ratings = {{ratingValue}};
+   const starTotal = 5;
+   const starPercentage = (ratings / starTotal) * 100;
+   const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+ 
+   document.querySelector('.stars-inner').style.width = starPercentageRounded;
+ });
+ </script>
