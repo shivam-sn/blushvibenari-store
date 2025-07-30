@@ -140,6 +140,12 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+              {%- when 'star' -%}
+<div class="stars-outer">
+    <div class="stars-inner">&nbsp;</div>
+    </div>
+{{ block.settings.reviews }}{{ block.settings.text }}
+{% render 'star-rating' ratingValue:  block.settings.reviews %}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -802,6 +808,25 @@
         }
       ]
     },
+    {
+    "type": "star",
+    "name": "Star Ratings",
+    "limit": 1,
+    "settings": [
+               {
+            "type": "text",
+            "label": "Star Rating",
+            "id": "reviews",
+           "default": "<p>3</p>"
+      },
+       {
+        "type": "text",
+        "id": "text",
+        "default": "<p>/5 Based on Reviews</p>",
+        "label": "Let's Share Star Ratings"
+      }
+    ]
+  },
     {
       "type": "inventory",
       "name": "t:sections.main-product.blocks.inventory.name",
