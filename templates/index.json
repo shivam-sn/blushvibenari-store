@@ -159,11 +159,20 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "sg_practise_UwVRwg": {
+      "type": "sg-practise",
+      "name": "find me",
+      "settings": {
+        "heading_id": "yes boss",
+        "text_id": "i am writting"
+      }
     }
   },
   "order": [
     "slideshow_QWJGMK",
     "featured_collection",
-    "collection_list_i7jR7g"
+    "collection_list_i7jR7g",
+    "sg_practise_UwVRwg"
   ]
 }
